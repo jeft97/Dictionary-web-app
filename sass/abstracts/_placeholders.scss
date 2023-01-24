@@ -1,0 +1,26 @@
+%flexcontainer{
+    display: flex;
+    align-items: center;
+}
+
+%list-style-item{
+    color: var(--clr-black-light);
+    list-style: none;
+    position: relative;
+    display: flex;
+
+    @include preference-color(){
+        color: var(--clr-white);
+     }
+}
+%list-style-item--before{
+    content: "\25CF";
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    position: absolute;
+    top: -.1rem;
+    left: -2rem;
+}
+.verb--text{
+    color: var(--clr-grey-dark);
+}

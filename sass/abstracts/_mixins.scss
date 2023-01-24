@@ -1,0 +1,19 @@
+@mixin respond($breakpoint){
+
+    @if $breakpoint == $break-point-tablet{
+        @media only screen and (max-width:$break-point-tablet){
+            @content;
+        }
+    }
+    @if $breakpoint == $break-point-mobile{
+        @media only screen and (max-width:$break-point-mobile){
+            @content;
+        }
+    }
+}
+
+@mixin preference-color(){
+    @media (prefers-color-scheme:dark){
+        @content;
+    }
+}

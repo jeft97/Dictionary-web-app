@@ -1,0 +1,111 @@
+.custom-select{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    border-right: 1.4px solid var(--clr-grey);
+    padding-right: 2rem;
+    cursor: pointer;
+}
+.selected-option{
+    display: inline-block;
+    font-weight: var(--fw-big) !important;
+    position: relative;
+}
+
+.arrow{
+    width: 2rem;
+    height: 2rem;
+    stroke: var(--clr-primary);
+    cursor: pointer;
+}
+
+.options-container{
+    width: 14rem;
+    height: 13rem;
+    padding: 1rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: calc(var(--br-radius-default ) / 2);
+    position: absolute;
+    top: 3.5rem;
+    left: -6.9rem;
+    z-index: 7000;
+    background-color: var(--clr-white);
+    @include preference-color(){
+        background-color: var(--clr-black-very-dark);
+        box-shadow: 0px 2px 8px var(--clr-primary);
+    }
+    &.dark{
+        background-color: var(--clr-black-very-dark);
+        box-shadow: 0px 2px 8px var(--clr-primary);
+    }
+   
+}
+
+.option{
+    cursor: pointer;
+    font-weight: var(--fw-big);
+}
+.option:hover{
+    color: var(--clr-primary);
+}
+.option:nth-of-type(2){
+    font-family: var(--ff-lora);
+}
+.option:nth-of-type(3){
+    font-family: var(--ff-inconsolata);
+}
+.select-arrow{
+    display: inline-flex;
+    height: 1.7rem;
+    width: 1.7rem;
+}
+
+.color-scheme{
+    @extend %flexcontainer;
+    gap:2rem;
+}
+.color-scheme__control{
+    display: inline-flex;
+}
+[for="change"]{
+    cursor: pointer;
+    display: inline-block;
+    width: 4rem;
+    height: 2.2rem;
+    border-radius: 200rem;
+    background-color: var(--clr-grey-dark);
+    position: relative;
+}
+[for="change"]::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: .4rem;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    transition: transform .3s ease;
+
+}
+
+.checkbox{
+    display: none;
+}
+.checkbox:checked + [for="change"]{
+    background-color: var(--clr-primary);
+    
+}
+.checkbox:checked + [for="change"]::after{
+    transform: translate(122%, -50%);
+    @include preference-color(){
+        transform: translate(122%, -50%);  
+    }
+}

@@ -1,0 +1,12 @@
+.circle-animated {
+    animation: scale 1.8s;
+    animation-iteration-count: infinite;
+  }
+
+
+@keyframes scale {
+  0% { transform: scale(.9); }
+  100% { transform: scale(.8); }
+}
+
+

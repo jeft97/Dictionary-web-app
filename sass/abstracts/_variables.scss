@@ -1,0 +1,33 @@
+:root{
+    color-scheme: light dark;
+
+    --clr-primary:hsl(274, 82%, 60%);
+    --clr-error:hsl(0, 100%, 66%);
+
+    --clr-black-very-dark:hsl(0, 0%, 2%);
+    --clr-black-dark:hsl(0, 0%, 12%);
+    --clr-black-light:hsl(0, 0%, 18%);
+    --clr-black-very-light:hsl(0, 0%, 23%);
+    
+    --clr-grey-very-dark:hsl(0, 0%, 51%);
+    --clr-grey-dark:hsl(0, 0%, 46%);
+    --clr-grey:hsl(0, 0%, 91%);
+    --clr-grey-light:hsl(0, 0%, 96%);
+
+    --clr-white:hsl(0, 0%, 100%);
+
+    --ff-inter:'Inter', sans-serif;
+    --ff-lora:'Lora', serif;
+    --ff-inconsolata: 'Inconsolata', monospace;
+
+    --fw-medium:400;
+    --fw-big:700;
+    --fs-default:1.6rem;
+    --fs-big:6.4rem;
+    --br-radius-default:1.6rem;
+
+}
+
+
+$break-point-tablet:48em;
+$break-point-mobile:23.5em;

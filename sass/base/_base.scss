@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: inherit;
+    @include respond($break-point-tablet){
+        font-size: 54%;
+    }
+    @include respond($break-point-mobile){
+        font-size: 46%;
+    }
+}
+
+input{
+    font:inherit;
+}
